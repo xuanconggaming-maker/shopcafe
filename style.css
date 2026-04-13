@@ -1,33 +1,40 @@
 /* =======================================================
-   STYLE CÙNG BOOTSTRAP 5 - BẢN CLEAN, KHÔNG VIỀN MÀU
+   STYLE CÙNG BOOTSTRAP 5 - CHUẨN THIẾT KẾ GỐC
 ======================================================= */
 * {
   font-family: "Arial", sans-serif;
 }
 body {
-  background-color: #fdfbf7; /* Nền trắng ngà nhẹ nhàng cho toàn trang */
+  background-color: #ebe3d5;
+  color: #2a1a12;
   overflow-x: hidden;
 }
 
 /* --- MÀU SẮC & TOP BAR --- */
 .top-bar {
-  background-color: #8c5535;
+  background-color: #4a2e1b; /* Nâu sậm chuẩn thiết kế */
+  text-align: left !important; /* Ép chữ sang trái */
+  padding: 15px 5%; /* Căn lề 2 bên */
 }
 .welcome-text {
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 22px; /* Chữ to hơn */
   font-style: italic;
-  color: #fff;
+  font-weight: bold;
+  color: #ffffff;
+  display: inline-block;
+  border-bottom: 1px solid #ffffff; /* Đường gạch chân màu trắng */
+  padding-bottom: 3px;
+  letter-spacing: 1px;
 }
 
-/* --- BANNER CHÍNH (NỀN HẠT CÀ PHÊ - KHÔNG VIỀN) --- */
+/* --- BANNER CHÍNH --- */
 .brand-banner {
-  background-image: url("image/nen-1.png"); /* Chắc chắn file ảnh nền tên là nen-1.png */
+  background-image: url("image/nen-1.png");
   background-size: cover;
   background-position: center;
   padding: 50px 0;
   position: relative;
-  /* Đã xóa hoàn toàn các viền màu ở đây */
 }
 .brand-banner-overlay {
   position: absolute;
@@ -35,110 +42,147 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    30,
-    15,
-    5,
-    0.45
-  ); /* Lớp phủ đen trong suốt để nổi chữ */
+  background-color: rgba(10, 5, 0, 0.4); /* Lớp phủ đen nhẹ */
 }
-.banner-logo-img {
-  max-width: 220px;
-  filter: drop-shadow(
-    0px 10px 15px rgba(0, 0, 0, 0.5)
-  ); /* Bóng đổ nhẹ cho logo */
+.brand-banner {
+  background-image: url("image/nền 1.png"); /* Lệnh gọi ảnh nền */
+  background-size: cover;
+  background-position: center;
+  /* ... */
 }
 .banner-text {
   padding-left: 20px;
 }
 .text-line-1 {
-  color: #ffe600;
-  font-size: 28px;
+  color: #cddc39; /* Màu vàng chanh chuẩn thiết kế */
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 15px !important;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .text-line-2 {
-  color: #ffe600;
-  font-size: 26px;
+  color: #cddc39; /* Màu vàng chanh */
+  font-size: 30px;
   font-weight: 900;
   margin-bottom: 25px !important;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }
 .text-line-3 {
   color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  font-size: 20px;
+  font-weight: normal;
 }
 
 /* --- THANH MENU (NAVBAR) --- */
 .header {
-  background-color: #5a3a22;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  padding: 12px 0;
+  background-color: #2d1a11;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 15px 0;
 }
 .nav-links {
   margin: 0;
   padding: 0;
 }
 .nav-links a {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 15px;
+  color: #eacda3;
+  font-weight: 600;
+  font-size: 14px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 5px;
+  padding: 8px 18px;
+  border-radius: 4px;
   transition: all 0.3s ease;
+  letter-spacing: 1px;
 }
 .nav-links a:hover {
-  color: #ffea00;
-  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  background-color: #4e342e;
 }
 
-/* --- BANNER LY CAFE --- */
-.hero-image-only {
-  max-height: 500px;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-image-only img {
-  object-fit: cover;
+/* Tối ưu container cho video */
+.hero-video-container {
   width: 100%;
+  height: 65vh; /* Chiều cao chiếm 65% màn hình, giúp ảnh khít đẹp */
+  overflow: hidden;
+  display: block;
+  background-color: #000; /* Màu nền đen khi video chưa tải xong */
 }
 
-/* --- PHẦN GIỚI THIỆU CHỮ --- */
-.hero-text-section {
-  background-color: #fdfbf7;
-  position: relative;
-  padding: 60px 0;
+/* Tối ưu video để khít khung */
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Bung tràn lấp đầy khung mà không bị méo */
+  object-position: center; /* Lấy trọng tâm phần cốc cà phê */
+  opacity: 0.9; /* Giữ độ mờ mờ cho mượt */
 }
-.hero-content h1 {
-  color: #8c5535;
+
+/* Điều chỉnh lại trên Mobile cho đẹp */
+@media (max-width: 768px) {
+  .hero-video-container {
+    height: 40vh;
+  } /* Ảnh nhỏ hơn trên mobile */
+}
+
+/* --- PHẦN GIỚI THIỆU CHUẨN THIẾT KẾ MỚI --- */
+.about-section {
+  background-color: #ded2be; /* Nền Nâu nhạt */
+  padding: 70px 0;
+}
+.about-title {
+  color: #5d4037;
+  font-weight: 900;
   font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
 }
-.hero-content h2 {
-  color: #5a3a22;
-  font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 30px;
+.about-subtitle {
+  color: #6d4c41;
+  font-size: 18px;
   font-weight: 600;
+  font-style: italic;
 }
-.hero-content p {
-  color: #444;
+.features-box {
+  background-color: #3e2723;
+  color: #ebe3d5;
+  padding: 30px 45px;
+  border-radius: 10px;
+  max-width: 750px;
+  font-size: 16px;
+  line-height: 1.8;
+  box-shadow: 0 10px 20px rgba(62, 39, 35, 0.15);
+}
+.service-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  height: 100%;
+  border: 1px solid #d4c4b7;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+}
+.service-card:hover {
+  box-shadow: 0 12px 30px rgba(93, 64, 55, 0.15);
+  transform: translateY(-8px);
+}
+.service-icon img {
+  width: 55px;
+  height: auto;
+  object-fit: contain;
+}
+.service-content h4 {
+  color: #5d4037;
+  font-weight: 900;
   font-size: 18px;
   margin-bottom: 10px;
+}
+.service-content p {
+  color: #4e342e;
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.6;
 }
 
 /* --- VÌ SAO CHỌN CHÚNG TÔI & REVIEW (NỀN ẢNH TỐI) --- */
 .why-section-v2,
 .review-section {
-  background-image: url("image/image_7b2fdf.png");
+  background-image: url("image/cf2.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -151,109 +195,117 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(20, 10, 5, 0.8);
+  background-color: rgba(25, 15, 10, 0.85);
 }
-.why-title {
-  color: #ff9900;
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
+.why-title,
+.review-title {
+  color: #d4a373;
+  font-size: 36px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 .why-subtitle {
-  color: #ddd;
+  color: #c8b6a6;
   font-size: 16px;
   font-style: italic;
 }
 .why-reasons h3 {
-  color: #ff9900;
+  color: #eacda3;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 .why-reasons p {
-  color: #eee;
+  color: #d7ccc8;
   font-size: 16px;
   margin-bottom: 10px;
 }
-/* Xóa viền ảnh, chỉ dùng bo góc và bóng mờ */
 .why-img {
   height: 280px;
   object-fit: cover;
   width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 /* --- ĐÁNH GIÁ KHÁCH HÀNG --- */
-.review-title {
-  color: #ff9900;
-  font-size: 32px;
-  font-weight: bold;
-}
 .review-card {
-  background-color: rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
+  background-color: rgba(62, 39, 35, 0.6);
+  border: 1px solid rgba(212, 163, 115, 0.2);
+  border-radius: 15px;
   padding: 50px 30px 30px;
   position: relative;
   margin-top: 50px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px); /* Hiệu ứng kính mờ sang trọng */
+  backdrop-filter: blur(5px);
 }
-/* Xóa viền Avatar */
 .avatar {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
   position: absolute;
-  top: -50px;
+  top: -45px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  border: 3px solid #d4a373;
 }
 .customer-name {
-  color: #ff9900;
+  color: #d4a373;
   font-size: 22px;
   font-weight: bold;
   margin-top: 15px;
 }
 .stars {
-  color: #ffd700;
+  color: #d4a373;
   font-size: 18px;
   margin-bottom: 15px;
 }
 .review-text {
-  color: #fff;
+  color: #efebe9;
   font-style: italic;
   line-height: 1.6;
 }
-/* Xóa viền ảnh lớn */
 .large-photo {
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 /* --- SẢN PHẨM & TIN TỨC --- */
 .products-section {
-  background-color: #fdfbf7;
+  background-color: #ebe3d5;
   padding: 80px 0;
 }
-.highlight-title {
-  color: #8c5535;
+.highlight-title,
+.news-title {
+  color: #3e2723;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 900;
   text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.highlight-title::after,
+.news-title::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background-color: #d4a373;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .product-img {
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
   cursor: pointer;
 }
 .product-img:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(93, 64, 55, 0.15);
 }
 
 /* --- KHUYẾN MÃI VÀ ĐẾM NGƯỢC --- */
@@ -262,126 +314,153 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  border-top: 5px solid #5d4037;
 }
 .promo-title-v2 {
-  color: #4a2511;
-  font-size: 36px;
+  color: #3e2723;
+  font-size: 34px;
   font-weight: 900;
   margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
-/* Xóa viền cục đếm ngược */
 .time-box-v2 {
-  background-color: rgba(217, 108, 43, 0.95);
-  border-radius: 15px;
+  background-color: #5d4037;
+  border-radius: 10px;
   padding: 20px;
-  min-width: 110px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  min-width: 100px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid #795548;
 }
 .time-box-v2 span {
-  color: #fff;
-  font-size: 42px;
+  color: #eacda3;
+  font-size: 40px;
   font-weight: bold;
 }
 .time-box-v2 p {
   color: #fff;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 5px;
-  font-weight: 600;
+  font-weight: normal;
+  letter-spacing: 1px;
 }
 
 /* --- COMMITMENT (CAM KẾT) --- */
 .commitment-bar {
-  background-color: #5a3a22;
-  box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.2);
+  background-color: #3e2723;
+  padding: 30px 0;
+  border-top: 2px solid #d4a373;
 }
 .icon-img {
-  max-width: 50px;
-  filter: brightness(0) invert(1); /* Chuyển icon thành màu trắng nếu cần */
+  max-width: 45px;
+  filter: brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(762%)
+    hue-rotate(345deg) brightness(94%) contrast(89%);
 }
 .commit-text h4 {
-  color: #ffcc00 !important;
+  color: #d4a373 !important;
   font-weight: bold;
+  font-size: 16px;
 }
 .commit-text p {
-  color: #fff;
+  color: #d7ccc8;
   font-size: 14px;
+  margin: 0;
 }
 
 /* --- BÀI VIẾT MỚI --- */
 .latest-news {
-  background-color: #e6d5c3;
+  background-color: #d4c4b7;
   padding: 80px 0;
-}
-.news-title {
-  color: #8c5535;
-  font-size: 32px;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 .news-card {
   background: #fff;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 12px;
   height: 100%;
   transition: 0.3s;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #c4b0a1;
 }
 .news-card:hover {
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(93, 64, 55, 0.1);
   transform: translateY(-5px);
 }
 .news-img {
   width: 100%;
-  height: 250px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 8px;
   margin-bottom: 20px;
 }
 .news-card h3 a {
-  color: #8c5535;
+  color: #3e2723;
   font-weight: bold;
   text-decoration: none;
   font-size: 18px;
   line-height: 1.4;
 }
+.news-card h3 a:hover {
+  color: #d4a373;
+}
 .news-card p {
-  color: #666;
+  color: #6d4c41;
   margin-top: 10px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* --- FOOTER --- */
 .footer {
-  background-color: #3e2723;
+  background-color: #2d1a11;
+  border-top: 4px solid #5d4037;
 }
 .footer-heading {
-  color: #ff9900;
-  font-size: 20px;
+  color: #d4a373;
+  font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 25px;
+  letter-spacing: 1px;
 }
 .footer p,
 .footer-link {
-  color: #ddd !important;
-  font-size: 15px;
+  color: #bcaaa4 !important;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.footer-link:hover {
+  color: #fff !important;
+  text-decoration: none !important;
 }
 .footer-bottom {
-  background-color: #261612;
+  background-color: #1e0f0a;
+  padding: 15px 0;
+}
+.footer-bottom p {
+  color: #8d6e63 !important;
+  font-size: 13px;
 }
 
-/* --- RESPONSIVE --- */
+/* =======================================================
+   HIỆU ỨNG JS SCROLL REVEAL (CHUYỂN ĐỘNG KHI CUỘN)
+======================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- RESPONSIVE MOBILE --- */
 @media (max-width: 768px) {
   .banner-logo-img {
     max-width: 150px;
     margin-bottom: 20px;
   }
   .text-line-1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .text-line-2 {
-    font-size: 20px;
+    font-size: 24px;
   }
   .text-line-3 {
     font-size: 16px;
@@ -393,506 +472,14 @@ body {
   .banner-text {
     padding-left: 0;
   }
-}
-
-/* --- STYLE CHO PHẦN GIỚI THIỆU CHUẨN THIẾT KẾ MỚI --- */
-.about-section {
-  background-color: #fdf9f1; /* Màu nền kem nhạt giống thiết kế */
-}
-.about-title {
-  color: #b5651d; /* Màu cam nâu */
-  font-weight: bold;
-  font-size: 28px;
-}
-.about-subtitle {
-  color: #222;
-  font-size: 18px;
-  font-weight: bold;
-}
-.features-box {
-  background-color: #4a2c10; /* Hộp màu nâu đậm */
-  color: #fdf9f1; /* Chữ màu kem sáng */
-  padding: 25px 40px;
-  border-radius: 12px;
-  max-width: 750px; /* Giới hạn chiều rộng để canh giữa đẹp hơn */
-  font-size: 16px;
-  line-height: 1.8;
-}
-.service-card {
-  background-color: #ffffff;
-  border-radius: 15px;
-  padding: 20px;
-  height: 100%;
-  border: 1px solid #ebe3d5; /* Viền nhạt cực mỏng */
-}
-.service-icon img {
-  width: 55px; /* Chỉnh lại độ lớn của icon */
-  height: auto; /* =======================================================
-   STYLE CÙNG BOOTSTRAP 5 - TÔNG MÀU CÀ PHÊ CHỦ ĐẠO
-======================================================= */
-  * {
-    font-family: "Arial", sans-serif;
-  }
-  body {
-    background-color: #fdf9f1; /* Nền Latte kem nhạt, ấm áp */
-    color: #2a1a12; /* Chữ màu xám đen pha nâu, không dùng đen tuyền */
-    overflow-x: hidden;
-  }
-
-  /* --- MÀU SẮC & TOP BAR --- */
-  .top-bar {
-    background-color: #3e2723; /* Nâu Espresso đậm */
-    border-bottom: 1px solid #5d4037;
-  }
-  .welcome-text {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 16px;
-    font-style: italic;
-    color: #eacda3; /* Màu vàng kem */
-    letter-spacing: 1px;
-  }
-
-  /* --- BANNER CHÍNH --- */
-  .brand-banner {
-    background-image: url("image/nen-1.png");
-    background-size: cover;
-    background-position: center;
-    padding: 55px 0;
-    position: relative;
-  }
-  .brand-banner-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(20, 10, 5, 0.6); /* Phủ đen sậm màu cà phê */
-  }
-  .banner-logo-img {
-    max-width: 220px;
-    filter: drop-shadow(0px 8px 12px rgba(0, 0, 0, 0.6));
-  }
-  .banner-text {
-    padding-left: 20px;
-  }
-  .text-line-1 {
-    color: #d4a373; /* Màu vàng Caramel sang trọng */
-    font-size: 26px;
-    font-weight: bold;
-    margin-bottom: 15px !important;
-    letter-spacing: 2px;
-  }
-  .text-line-2 {
-    color: #eacda3; /* Trắng kem sữa */
-    font-size: 32px;
-    font-weight: 900;
-    margin-bottom: 25px !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  }
-  .text-line-3 {
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: normal;
-    letter-spacing: 1px;
-  }
-
-  /* --- THANH MENU (NAVBAR) --- */
-  .header {
-    background-color: #2d1a11; /* Nâu cực đậm, gần như đen */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    padding: 15px 0;
-  }
-  .nav-links {
-    margin: 0;
-    padding: 0;
-  }
-  .nav-links a {
-    color: #eacda3; /* Màu kem sữa */
-    font-weight: 600;
-    font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 8px 18px;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-  }
-  .nav-links a:hover {
-    color: #fff;
-    background-color: #4e342e; /* Nâu nhạt hơn khi di chuột */
-  }
-
-  /* --- BANNER LY CAFE --- */
-  .hero-image-only {
-    max-height: 550px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .hero-image-only img {
-    object-fit: cover;
-    width: 100%;
-  }
-
-  /* --- PHẦN GIỚI THIỆU CHUẨN THIẾT KẾ MỚI --- */
-  .about-section {
-    background-color: #fdf9f1;
-    padding: 70px 0;
-  }
-  .about-title {
-    color: #5d4037; /* Nâu Mocha */
-    font-weight: 900;
-    font-size: 32px;
-  }
-  .about-subtitle {
-    color: #6d4c41;
-    font-size: 18px;
-    font-weight: 600;
-    font-style: italic;
-  }
-  .features-box {
-    background-color: #3e2723; /* Nâu Espresso */
-    color: #fdf9f1;
-    padding: 30px 45px;
-    border-radius: 10px;
-    max-width: 750px;
-    font-size: 16px;
-    line-height: 1.8;
-    box-shadow: 0 10px 20px rgba(62, 39, 35, 0.15);
-  }
-  .service-card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    padding: 25px 20px;
-    height: 100%;
-    border: 1px solid #eae0d5;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
-    transition: 0.3s;
-  }
-  .service-card:hover {
-    box-shadow: 0 10px 25px rgba(93, 64, 55, 0.1);
-    transform: translateY(-5px);
-  }
-  .service-icon img {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
-  }
-  .service-content h4 {
-    color: #5d4037;
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-  .service-content p {
-    color: #4e342e;
-    font-size: 14px;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  /* --- VÌ SAO CHỌN CHÚNG TÔI & REVIEW (NỀN ẢNH TỐI) --- */
-  .why-section-v2,
-  .review-section {
-    background-image: url("image/image_7b2fdf.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative;
-    padding: 80px 0;
-  }
-  .dark-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(25, 15, 10, 0.85); /* Tối và ám nâu */
-  }
+  .about-title,
   .why-title,
-  .review-title {
-    color: #d4a373; /* Vàng Caramel */
-    font-size: 36px;
-    font-weight: 900;
-    text-transform: uppercase;
-  }
-  .why-subtitle {
-    color: #c8b6a6;
-    font-size: 16px;
-    font-style: italic;
-  }
-  .why-reasons h3 {
-    color: #eacda3;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  .why-reasons p {
-    color: #d7ccc8;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  .why-img {
-    height: 280px;
-    object-fit: cover;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  /* --- ĐÁNH GIÁ KHÁCH HÀNG --- */
-  .review-card {
-    background-color: rgba(62, 39, 35, 0.6); /* Nền nâu trong suốt */
-    border: 1px solid rgba(212, 163, 115, 0.2);
-    border-radius: 15px;
-    padding: 50px 30px 30px;
-    position: relative;
-    margin-top: 50px;
-    backdrop-filter: blur(5px);
-  }
-  .avatar {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    object-fit: cover;
-    position: absolute;
-    top: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 3px solid #d4a373; /* Viền vàng caramel cho avatar */
-  }
-  .customer-name {
-    color: #d4a373;
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-  }
-  .stars {
-    color: #d4a373;
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  .review-text {
-    color: #efebe9;
-    font-style: italic;
-    line-height: 1.6;
-  }
-  .large-photo {
-    border-radius: 12px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  }
-
-  /* --- SẢN PHẨM & TIN TỨC --- */
-  .products-section {
-    background-color: #fdf9f1;
-    padding: 80px 0;
-  }
+  .review-title,
   .highlight-title,
   .news-title {
-    color: #3e2723;
-    font-size: 32px;
-    font-weight: 900;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
+    font-size: 26px;
   }
-  /* Tạo đường gạch chân nhỏ gọn gàng dưới tiêu đề */
-  .highlight-title::after,
-  .news-title::after {
-    content: "";
-    position: absolute;
-    width: 60px;
-    height: 3px;
-    background-color: #d4a373;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .product-img {
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .product-img:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(93, 64, 55, 0.15);
-  }
-
-  /* --- KHUYẾN MÃI VÀ ĐẾM NGƯỢC --- */
-  .promotion-v2 {
-    background-image: url("image/nen-go.png"); /* Nền vân gỗ */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-top: 5px solid #5d4037;
-  }
-  .promo-title-v2 {
-    color: #3e2723;
-    font-size: 34px;
-    font-weight: 900;
-    margin-bottom: 30px;
-  }
-  .time-box-v2 {
-    background-color: #5d4037; /* Nâu Mocha */
-    border-radius: 10px;
-    padding: 20px;
-    min-width: 100px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    border: 1px solid #795548;
-  }
-  .time-box-v2 span {
-    color: #eacda3;
-    font-size: 40px;
-    font-weight: bold;
-  }
-  .time-box-v2 p {
-    color: #fff;
-    font-size: 14px;
-    margin-top: 5px;
-    font-weight: normal;
-    letter-spacing: 1px;
-  }
-
-  /* --- COMMITMENT (CAM KẾT) --- */
-  .commitment-bar {
-    background-color: #3e2723;
-    padding: 30px 0;
-    border-top: 2px solid #d4a373;
-  }
-  .icon-img {
-    max-width: 45px;
-    filter: brightness(0) saturate(100%) invert(86%) sepia(21%) saturate(762%)
-      hue-rotate(345deg) brightness(94%) contrast(89%); /* Chuyển icon sang màu Vàng Caramel */
-  }
-  .commit-text h4 {
-    color: #d4a373 !important;
-    font-weight: bold;
-    font-size: 16px;
-  }
-  .commit-text p {
-    color: #d7ccc8;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  /* --- BÀI VIẾT MỚI --- */
-  .latest-news {
-    background-color: #f5ebe1;
-    padding: 80px 0;
-  }
-  .news-card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    height: 100%;
-    transition: 0.3s;
-    border: 1px solid #eae0d5;
-  }
-  .news-card:hover {
-    box-shadow: 0 10px 25px rgba(93, 64, 55, 0.1);
-    transform: translateY(-5px);
-  }
-  .news-img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
-  }
-  .news-card h3 a {
-    color: #3e2723;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 1.4;
-  }
-  .news-card h3 a:hover {
-    color: #d4a373;
-  }
-  .news-card p {
-    color: #6d4c41;
-    margin-top: 10px;
-    font-size: 14px;
-  }
-
-  /* --- FOOTER --- */
-  .footer {
-    background-color: #2d1a11;
-    border-top: 4px solid #5d4037;
-  }
-  .footer-heading {
-    color: #d4a373;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-    letter-spacing: 1px;
-  }
-  .footer p,
-  .footer-link {
-    color: #bcaaa4 !important;
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .footer-link:hover {
-    color: #fff !important;
-    text-decoration: none !important;
-  }
-  .footer-bottom {
-    background-color: #1e0f0a;
-    padding: 15px 0;
-  }
-  .footer-bottom p {
-    color: #8d6e63 !important;
-    font-size: 13px;
-  }
-
-  /* --- RESPONSIVE --- */
-  @media (max-width: 768px) {
-    .banner-logo-img {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-    .text-line-1 {
-      font-size: 20px;
-    }
-    .text-line-2 {
-      font-size: 24px;
-    }
-    .text-line-3 {
-      font-size: 16px;
-    }
-    .brand-banner {
-      padding: 30px 10px;
-      text-align: center;
-    }
-    .banner-text {
-      padding-left: 0;
-    }
-    .about-title,
-    .why-title,
-    .review-title,
-    .highlight-title,
-    .news-title {
-      font-size: 26px;
-    }
-  }
-  object-fit: contain;
-}
-.service-content h4 {
-  color: #4a2c10;
-  font-weight: bold;
-  font-size: 17px;
-  margin-bottom: 8px;
-}
-.service-content p {
-  color: #000;
-  font-size: 13px;
-  margin: 0;
-  line-height: 1.5;
-  font-weight: 500;
+  .hero-video-container {
+    height: 40vh;
+  } /* Ảnh nhỏ hơn trên mobile */
 }

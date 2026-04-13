@@ -1,0 +1,126 @@
+/* geolizr currencyswitcher */
+
+.geolizr-currency-links::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0.66, 0.66, 0.66, 0.5);
+}
+
+[dir="rtl"] span.geolizr-currency-switcher-arrow-down,
+[dir="rtl"] span.geolizr-currency-switcher-arrow-up {
+    right: -10px;
+    left: 5px;
+}
+
+[dir="rtl"] ul.geolizr-currency-list {
+    left: 0;
+    right: 8px;
+}
+
+.geolizr-no-scroll .geolizr-currency-links {
+    overflow: hidden;
+}
+
+[data-block-handle=geolizr-currency-switcher] {
+    display: inline-block;
+    width: 85px;
+    max-width: 85px !important;
+    height: 20px;
+    max-height: 20px !important;
+    vertical-align: middle;
+    line-height: 20px;
+    overflow: visible !important;
+    position: relative;
+    top: 0;
+    margin: 0 10px;
+}
+
+/* Let's get this party started */
+.geolizr-currency-links::-webkit-scrollbar {
+    width: 8px;
+    margin-left: -4px;
+}
+
+/* Track */
+.geolizr-currency-links::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
+/* Handle */
+.geolizr-currency-links::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0.66, 0.66, 0.66, 0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+/* geolizr currencyswitcher end */
+
+/* geolizr popup */
+
+@media only screen
+and (orientation: portrait) {
+    .geolizr-popup.gp-mobile {
+        margin-top: 60px;
+    }
+}
+
+.geolizr-popup-round-corner {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.geolizr-popup-shadow {
+    -webkit-box-shadow: 10px 10px 5px 0 rgba(143,143,143,0.35);
+    -moz-box-shadow: 10px 10px 5px 0 rgba(143,143,143,0.35);
+    box-shadow: 10px 10px 5px 0 rgba(143,143,143,0.35);
+}
+
+#geolizr-dismiss-popup {
+    box-sizing: content-box;
+    padding: 5px !important;
+    margin: 0 !important;
+    position: absolute !important;
+    right: 0 !important;
+    text-decoration: none !important;
+    font-family: Arial, serif ! important;
+    top: 0 !important;
+    height: 20px !important;
+    width: 20px !important;
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+/* geolizr popup end */
+
+/* animations */
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideInUp {
+    0% {
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
