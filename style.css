@@ -520,3 +520,72 @@ body {
   position: relative;
   z-index: 2;
 }
+
+/* =======================================================
+   NÚT LIÊN HỆ NỔI (FLOATING BUTTONS) DƯỚI GÓC PHẢI
+======================================================= */
+.floating-contact {
+  position: fixed; /* Ghim cố định trên màn hình */
+  bottom: 30px; /* Cách đáy 30px */
+  right: 30px; /* Cách lề phải 30px */
+  display: flex;
+  flex-direction: column; /* Xếp dọc các nút */
+  gap: 15px; /* Khoảng cách giữa các nút */
+  z-index: 9999; /* Đảm bảo luôn nổi lên trên mọi hình ảnh khác */
+}
+
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+/* Hiệu ứng nảy lên khi đưa chuột vào */
+.float-btn:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* Màu sắc thương hiệu của từng nút */
+.zalo-btn {
+  background-color: #0068ff; /* Màu xanh nước biển chuẩn Zalo */
+  font-size: 16px;
+  font-weight: bold;
+}
+.zalo-text {
+  font-family: Arial, sans-serif;
+}
+
+.fb-btn {
+  background-color: #1877f2; /* Màu xanh chuẩn Facebook */
+}
+
+.email-btn {
+  background-color: #ea4335; /* Màu đỏ chuẩn Gmail */
+}
+
+/* Thu nhỏ các nút lại một chút khi xem trên điện thoại cho đỡ vướng */
+@media (max-width: 768px) {
+  .floating-contact {
+    bottom: 20px;
+    right: 20px;
+    gap: 12px;
+  }
+  .float-btn {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+  .zalo-btn {
+    font-size: 13px;
+  }
+}
